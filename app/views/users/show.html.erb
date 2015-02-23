@@ -1,0 +1,12 @@
+<h1> <%= @user.user_name %></h1>
+
+<%= link_to "Edit #{@user.user_name}", edit_user_path %>
+
+<table>
+  <tr>
+    <td> <strong> User Name:</strong> <%= @user.user_name %></td>
+  </tr>
+  <tr>
+    <td> <strong> About:</strong> <%= @user.about %></td>
+  </tr>
+</table>

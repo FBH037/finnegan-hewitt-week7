@@ -28,6 +28,10 @@ before_action :set_user, only: [:update, :edit, :destroy, :show]
     end
   end
 
+  def show
+  end
+  
+
 private
 
 def user_params
