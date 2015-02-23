@@ -1,0 +1,17 @@
+<h1> <%= @course.title %> </h1>
+<%= link_to "Courses", courses_path %>
+<%= link_to "Edit #{@course.title}", edit_course_path(@course) %>
+<%# link_to "Delete #{@course.title}" %>
+
+<table>
+  <tr>
+    <td> <strong> Title:</strong> <%= @course.title %> </td>
+    <td> <strong> Night/Day:</strong>
+      <%if @course.day_night == true %>
+      Day
+      <% else %>
+      Night
+      <% end %>
+    </td>
+  </tr>
+</table>
