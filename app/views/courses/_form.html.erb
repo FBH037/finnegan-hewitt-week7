@@ -1,0 +1,13 @@
+<%= form_for @course do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :night_day, "Is this course at night?" %>
+<%= f.check_box :title %>
+<% if @course.new_record? %>
+  <%= f.submit %>
+<% else %>
+  <%= f.submit "Update Course" %>
+  delete
+<% end %>
+<% end %>
+<%= link_to "Cancel", users_path %>

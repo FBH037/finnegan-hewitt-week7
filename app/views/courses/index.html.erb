@@ -1,0 +1,27 @@
+<h1>Courses</h1>
+
+<%= link_to "New Course", new_course_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Day/Night</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+      <td> <%= course.title %></td>
+      <td> <%if course.day_night == true %>
+            Day
+            <% else %>
+            Night
+            <% end %>
+      </td>
+      <td> <%= link_to "Edit", edit_course_path(course) %></td>
+      <td> Delete</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
