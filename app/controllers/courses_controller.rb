@@ -32,6 +32,13 @@ class CoursesController < ApplicationController
     end
   end
 
+  def destroy
+    @course.destroy
+    if @course.destroy
+      redirect_to courses_path
+    end
+  end
+
   private
   def course_params
     params.require(:course).permit(:title, :day_night)

@@ -7,7 +7,7 @@
   <%= f.submit %>
 <% else %>
   <%= f.submit "Update Course" %>
-  delete
+  <%= link_to "Delete Course", course_path(@course), method: :delete %>
 <% end %>
 <% end %>
 <%= link_to "Cancel", users_path %>
