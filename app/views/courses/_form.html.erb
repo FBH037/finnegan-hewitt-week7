@@ -1,8 +1,8 @@
 <%= form_for @course do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>
-<%= f.label :night_day, "Is this course at night?" %>
-<%= f.check_box :title %>
+<%= f.label :day_night, "Is this course at night?" %>
+<%= f.check_box :day_night %>
 <% if @course.new_record? %>
   <%= f.submit %>
 <% else %>
