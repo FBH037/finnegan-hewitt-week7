@@ -4,7 +4,7 @@
 <%= f.label :day_night, "Is this course at night?" %>
 <%= f.check_box :day_night %>
 <% if @course.new_record? %>
-  <%= f.submit %>
+  <%= f.submit "Create Course"%>
 <% else %>
   <%= f.submit "Update Course" %>
   <%= link_to "Delete Course", course_path(@course), method: :delete %>
