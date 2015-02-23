@@ -11,6 +11,7 @@
 <% if current_user.nil? %>
 <%= link_to "Log In", login_path %>
 <% else %>
+<%= link_to 'Sign Out', signout_path%>
 <% end %>
 
 <%= yield %>
