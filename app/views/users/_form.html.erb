@@ -11,6 +11,7 @@
 <%= f.submit %>
 <% else %>
 <%= f.submit "Update User" %>
+<%= link_to "Delete User", user_path(@user), method: :delete %>
 <% end %>
 <% end %>
 <%= link_to "Cancel", users_path %>

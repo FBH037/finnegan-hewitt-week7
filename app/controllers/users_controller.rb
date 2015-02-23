@@ -30,8 +30,14 @@ before_action :set_user, only: [:update, :edit, :destroy, :show]
 
   def show
   end
-  
 
+  def destroy
+    @user.destroy
+    if @user.destroy
+      redirect_to users_path
+    end
+  end
+  
 private
 
 def user_params
