@@ -8,11 +8,12 @@
 </head>
 <body>
 
-<% if current_user.nil? %>
+<%# if current_user.nil? %>
 <%= link_to "Log In", login_path %>
-<% else %>
+<%= link_to "Sign up", new_user_path %>
+<%# else %>
 <%= link_to 'Sign Out', signout_path%>
-<% end %>
+<%# end %>
 
 <%= yield %>
 

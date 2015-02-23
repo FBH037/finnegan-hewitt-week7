@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:edit, :update, :show, :destroy]
+  before_filter :authorize
 
   def index
     @courses = Course.all.reverse
