@@ -13,7 +13,7 @@
       <tr>
         <td> <%=  user.user_name %></td>
         <td><%=user.about%></td>
-        <td> Edit</td>
+        <td> <%= link_to "Edit User", edit_user_path(user) %> </td>
         <td>Delete</td>
       </tr>
     <% end %>

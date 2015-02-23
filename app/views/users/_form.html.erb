@@ -7,6 +7,10 @@
 <%= f.password_field :password %><br>
 <%= f.label :password_confirmation %>
 <%= f.password_field :password_confirmation %><br>
+<% if @user.new_record?%>
 <%= f.submit %>
+<% else %>
+<%= f.submit "Update User" %>
+<% end %>
 <% end %>
 <%= link_to "Cancel", users_path %>
