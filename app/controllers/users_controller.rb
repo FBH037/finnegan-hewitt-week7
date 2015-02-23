@@ -34,10 +34,14 @@ before_filter :authorize, except: [:new, :create]
   end
 
   def destroy
-    @user.destroy
-    if current_user
-    if @user.destroy
-      redirect_to users_path
+    if @current_user.id == @user.id
+      @user.destroy
+      redirect_to signout_path
+    else
+      @user.destroy
+      if @user.destroy
+        redirect_to users_path
+      end
     end
   end
 
